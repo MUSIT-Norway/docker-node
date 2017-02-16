@@ -16,7 +16,6 @@ ENV LANG en_US.UTF-8
 
 # Install docker-engine
 RUN \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6 && \
   curl -fsSL https://yum.dockerproject.org/gpg | apt-key add - && \
   add-apt-repository "deb https://apt.dockerproject.org/repo/ debian-$(lsb_release -cs) main" && \
   apt-get update && \
