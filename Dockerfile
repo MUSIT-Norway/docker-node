@@ -2,7 +2,9 @@ FROM library/node:7
 
 # Install locales package
 RUN \
-  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y locales
+  apt-get update && \
+  DEBIAN_FRONTEND=noninteractive && \
+  apt-get install -y locales apt-transport-https ca-certificates software-properties-common
 
 # Set locale to be en_US.UTF-8
 RUN \
